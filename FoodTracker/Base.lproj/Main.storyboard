@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,23 +18,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter MealName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwm-7d-bdw">
-                                <rect key="frame" x="0.0" y="84" width="600" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MealName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Xn-Y1F">
-                                <rect key="frame" x="0.0" y="46" width="82" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLg-lx-FlQ">
-                                <rect key="frame" x="0.0" y="142" width="141" height="30"/>
-                                <state key="normal" title="Set default label text"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jxF-18-2Hx">
+                                <rect key="frame" x="20" y="47" width="560" height="114"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MealName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sc-Xn-Y1F">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter MealName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwm-7d-bdw">
+                                        <rect key="frame" x="0.0" y="42" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLg-lx-FlQ">
+                                        <rect key="frame" x="0.0" y="84" width="141" height="30"/>
+                                        <state key="normal" title="Set default label text"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gwm-7d-bdw" secondAttribute="trailing" id="08B-R5-IMr"/>
+                                    <constraint firstAttribute="trailing" secondItem="9sc-Xn-Y1F" secondAttribute="trailing" id="G4F-Ke-g1l"/>
+                                    <constraint firstAttribute="trailing" secondItem="gwm-7d-bdw" secondAttribute="trailing" id="GQP-O0-AWp"/>
+                                    <constraint firstItem="gwm-7d-bdw" firstAttribute="leading" secondItem="jxF-18-2Hx" secondAttribute="leading" id="Gxw-RA-AsJ"/>
+                                    <constraint firstItem="9sc-Xn-Y1F" firstAttribute="top" secondItem="jxF-18-2Hx" secondAttribute="top" constant="12" id="MeZ-R8-fPo"/>
+                                    <constraint firstItem="9sc-Xn-Y1F" firstAttribute="leading" secondItem="jxF-18-2Hx" secondAttribute="leading" id="Qc7-hN-8Ba"/>
+                                    <constraint firstAttribute="trailing" secondItem="gwm-7d-bdw" secondAttribute="trailing" id="Sm6-Zu-CNq"/>
+                                    <constraint firstItem="gwm-7d-bdw" firstAttribute="leading" secondItem="jxF-18-2Hx" secondAttribute="leading" id="Ss2-6X-loU"/>
+                                    <constraint firstAttribute="trailing" secondItem="gwm-7d-bdw" secondAttribute="trailing" id="e8W-EB-cCN"/>
+                                    <constraint firstItem="gwm-7d-bdw" firstAttribute="leading" secondItem="jxF-18-2Hx" secondAttribute="leading" id="eDg-RH-iGg"/>
+                                    <constraint firstItem="gwm-7d-bdw" firstAttribute="leading" secondItem="jxF-18-2Hx" secondAttribute="leading" id="kYB-Wu-mNd"/>
+                                    <constraint firstItem="gwm-7d-bdw" firstAttribute="leading" secondItem="jxF-18-2Hx" secondAttribute="leading" id="lgi-wN-f3O"/>
+                                    <constraint firstAttribute="trailing" secondItem="gwm-7d-bdw" secondAttribute="trailing" id="ygA-X3-pwB"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="G4F-Ke-g1l"/>
+                                        <exclude reference="MeZ-R8-fPo"/>
+                                        <exclude reference="Qc7-hN-8Ba"/>
+                                        <exclude reference="08B-R5-IMr"/>
+                                        <exclude reference="GQP-O0-AWp"/>
+                                        <exclude reference="Gxw-RA-AsJ"/>
+                                        <exclude reference="Ss2-6X-loU"/>
+                                        <exclude reference="e8W-EB-cCN"/>
+                                        <exclude reference="kYB-Wu-mNd"/>
+                                        <exclude reference="lgi-wN-f3O"/>
+                                        <exclude reference="ygA-X3-pwB"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jxF-18-2Hx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4gF-yp-CfY"/>
+                            <constraint firstItem="jxF-18-2Hx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5cS-Ly-hot"/>
+                            <constraint firstItem="jxF-18-2Hx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="BU5-E1-jcl"/>
+                            <constraint firstItem="jxF-18-2Hx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Opv-XH-HAm"/>
+                            <constraint firstItem="jxF-18-2Hx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="RLt-kI-xuh"/>
+                            <constraint firstItem="jxF-18-2Hx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="Wp5-qZ-ryP"/>
+                            <constraint firstItem="jxF-18-2Hx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Zg7-Mz-evi"/>
+                            <constraint firstItem="jxF-18-2Hx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jet-rn-ocn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5cS-Ly-hot"/>
+                                <exclude reference="Opv-XH-HAm"/>
+                                <exclude reference="RLt-kI-xuh"/>
+                                <exclude reference="Wp5-qZ-ryP"/>
+                                <exclude reference="jet-rn-ocn"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
